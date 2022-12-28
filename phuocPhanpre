@@ -1,6 +1,7 @@
 local Player = game:GetService("Players").LocalPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "🎄 🎅[ CANDY ] Blox Fruits", HidePremium = false,IntroEnable = true, IntroText = "🎄 🎅[XMAS] Blox Fruits", SaveConfig = true, ConfigFolder = "🎄 🎅[XMAS] Blox Fruits"})
+local Window = OrionLib:MakeWindow({Name = "🎄 🎅[ XMAS ] Blox Fruits", HidePremium = false,IntroEnable = true, IntroText = "🎄 🎅[XMAS] Blox Fruits", SaveConfig = true, ConfigFolder = "🎄 🎅[XMAS] Blox Fruits"})
+
 
 _G.x2xp = true
 _G.fragment200 = true
@@ -8,18 +9,40 @@ _G.fragment500 = true
 _G.elfhat = true
 _G.satanhat = true
 _G.sleigh = true
+---------------MISC-------------------------
 _G.fast_attack = true
 _G.stop_fastattack = true
 _G.FPSBooster = true
 _G.Redeem_Code = true
 _G.Auto_Buy_Random_Fruit = true
+_G.Select_Fruit = "Bomb", "Spike","Chop","Spring","Kilo","Smoke","Spin","Flame","Falcon","Ice","Sand","Dark","Revive","Diamond","Light","Light","Love","Magma","Portal","Rubber","Quake","Human-Buddha","Barrier","String","Bird-Pheonix","Rumble","Paw","Blizzard","Gravity","Dough","Shadow","Venom","Control","Spirit","Dragon","Leopard"
+_G.auto_buy_Fruit = true
+-------------Stat---------------------------
 _G.Meele_Stat = true
 _G.Defense_Stat = true
 _G.Gun_Stat = true
 _G.BloxFruit_Stat = true
 _G.Sword_Stat = true
+-------------------------Farm----------------
+_G.auto_farm = true
+_G.auto_Buso = true
+_G.auto_Ken = true
+_G.auto_Ability = true
 
---stat--
+
+
+------------------------------------------------------------------STATS------------------------------------------------
+
+	function auto_Ability()
+		while _G.auto_Ability == true do
+			local args = {
+				[1] = "ActivateAbility"
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+			wait(27)
+		end
+	end
+
 	function Meele_Stat()
 		while _G.Meele_Stat == true do
 			local args = {
@@ -28,7 +51,7 @@ _G.Sword_Stat = true
 				[3] = 1
 			}
 			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-			wait(0.1)
+			wait(0)
 		end
 	end
 
@@ -40,7 +63,7 @@ _G.Sword_Stat = true
 				[3] = 1
 			}
 			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-			wait(0.1)
+			wait(0)
 		end
 	end
 
@@ -52,7 +75,7 @@ _G.Sword_Stat = true
 				[3] = 1
 			}
 			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-			wait(0.1)
+			wait(0)
 		end
 	end
 
@@ -64,7 +87,7 @@ _G.Sword_Stat = true
 				[3] = 1
 			}
 			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-			wait(0.1)
+			wait(0)
 		end
 	end
 	
@@ -76,9 +99,66 @@ _G.Sword_Stat = true
 				[3] = 1
 			}
 			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-			wait(0.1)
+			wait(0)
 		end
 	end
+--------------------------------------------------BUY FRUIT--------------------------------------------
+function auto_buy_Fruit()
+	while _G.auto_buy_Fruit == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Kilo-Kilo",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Spin-Spin",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Chop-Chop",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Spring-Spring",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Spike-Spike",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "String-String",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Portal-Portal",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		wait()
+	end
+end
+
+
+----------------------------------------------FARM-----------------------------------------------
 
 function Auto_Buy_Random_Fruit()
 	while _G.Auto_Buy_Random_Fruit == true do
@@ -171,21 +251,59 @@ function sleigh()
 		wait(0.0001)
 	end
 end
+---------------------------MEELE-----------------------------
 
---[GUI HUB]--
+
+
+--------------------------[GUI HUB]--------------------------
 OrionLib:MakeNotification({
-	Name = "🎄 🎅[ CANDY ] Blox Fruits",
-	Content = "BETA 🎄 🎅",
+	Name = "🎄 🎅[ XMAS ] Blox Fruits",
+	Content = " Beta Script [ Thank using the script ]✅",
 	Image = "rbxassetid://4483345998",
-	Time = 10
+	Time = 20
+})
+local Tab = Window:MakeTab({
+	Name = "Creator Script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Owner & Devs : PhuocPhan#4450"
+})
+local Section = Tab:AddSection({
+	Name = "Discord Support : https://discord.gg/tuzTUeWVt5"
+})
+Tab:AddLabel("Status Script: 🟠")
+local Section = Tab:AddSection({
+	Name = "🟢 Working...!"
+})
+local Section = Tab:AddSection({
+	Name = "🟠 Updating...!"
+})
+local Section = Tab:AddSection({
+	Name = "🔴 Detected (Wait new update)...!"
 })
 
+-------------------Farming------------------------------------
+local Tab = Window:MakeTab({
+	Name = "Farming",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddToggle({
+	Name = "Auto Ability",
+	Default = false,
+	Callback = function(Value)
+		_G.auto_Ability = Value
+		auto_Ability()
+	end    
+})
+------------------------------------stat------------------------
 local Tab = Window:MakeTab({
 	Name = "STATS",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 Tab:AddToggle({
 	Name = "Meele",
 	Default = false,
@@ -194,7 +312,6 @@ Tab:AddToggle({
 		Meele_Stat()
 	end    
 })
-
 Tab:AddToggle({
 	Name = "Defense",
 	Default = false,
@@ -227,21 +344,141 @@ Tab:AddToggle({
 		BloxFruit_Stat()
 	end    
 })
+--------------------------------------SHOP---------------------------------------
 local Tab = Window:MakeTab({
 	Name = "SHOP",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+Tab:AddLabel("Meele")----------------------------MEELEv1-------------------------------------
 
+Tab:AddButton({
+	Name = "Buy Electro",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuyElectro"
+}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Black Leg",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuyBlackLeg"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy FishMan Karate",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuyFishmanKarate"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Dragon Claw",
+	Callback = function(Value)
+		local args = {
+			[1] = "BlackbeardReward",
+			[2] = "DragonClaw",
+			[3] = "1"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		local args = {
+			[1] = "BlackbeardReward",
+			[2] = "DragonClaw",
+			[3] = "2"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Buy SuperHuman",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuySuperhuman"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Death Step",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuyDeathStep"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Shark Man",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuySharkmanKarate",
+			[2] = true
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		local args = {
+			[1] = "BuySharkmanKarate"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Electric Claw",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuyElectricClaw"
+			}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Dragon Talon",
+	Callback = function(Value)
+		local args = {
+            [1] = "BuyDragonTalon",
+            [2] = true
+            }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        local args = {
+            [1] = "BuyDragonTalon"
+            }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy GodHuman",
+	Callback = function(Value)
+		local args = {
+			[1] = "BuyGodhuman"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddLabel("🍎Fruits🍎")
+Tab:AddToggle({
+	Name = "Buy Fruit Spine",
+	Default = false,
+	Callback = function(Value)
+		_G.Select_Fruit = Value
+		print(_G.Select_Fruit)
+	end    
+})
 Tab:AddDropdown({
-	Name = "🍎Select Snipe Blox Fruit🍎",
+	Name = "🍎Select Snipe Blox Fruit🍎[ NOT WORKING ]",
 	Default = "Nil",
 	Options = {"Bomb", "Spike","Chop","Spring","Kilo","Smoke","Spin","Flame","Falcon","Ice","Sand","Dark","Revive","Diamond","Light","Light","Love","Magma","Portal","Rubber","Quake","Human-Buddha","Barrier","String","Bird-Pheonix","Rumble","Paw","Blizzard","Gravity","Dough","Shadow","Venom","Control","Spirit","Dragon","Leopard"},
 	Callback = function(Value)
 		print(Value)
 	end    
 })
-
 Tab:AddToggle({
 	Name = "Buy Random Fruits",
 	Default = false,
@@ -250,16 +487,14 @@ Tab:AddToggle({
 		Auto_Buy_Random_Fruit()
 	end    
 })
+--------------------------------------FRAGMENT------------------------------------
 
+Tab:AddLabel("FragMent")
 Tab:AddButton({
 	Name = "Reset Stat",
 	Callback = function(Value)
-		local args = {
-			[1] = "BlackbeardReward",
-			[2] = "Refund",
-			[3] = "2"
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
 	end    
 })
 
@@ -324,7 +559,7 @@ Tab:AddButton({
 			sleigh()
   	end    
 })
-
+-----------------------------MICS-------------------------
 local Tab = Window:MakeTab({
 	Name = "MISC",
 	Icon = "rbxassetid://4483345998",
@@ -416,11 +651,6 @@ Tab:AddButton({
 		end)()
   	end  
 })
-
-
-
-
-
 
 
 
