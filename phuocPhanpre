@@ -262,6 +262,12 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 20
 })
+OrionLib:MakeNotification({
+	Name = "🔰 Change Logs New 🔰",
+	Content = "♻️ Shop , Stat , Meele ,...♻️",
+	Image = "rbxassetid://4483345998",
+	Time = 30
+})
 local Tab = Window:MakeTab({
 	Name = "Creator Script",
 	Icon = "rbxassetid://4483345998",
