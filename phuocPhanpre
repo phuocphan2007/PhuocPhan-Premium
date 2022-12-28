@@ -1,0 +1,428 @@
+local Player = game:GetService("Players").LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "🎄 🎅[ CANDY ] Blox Fruits", HidePremium = false,IntroEnable = true, IntroText = "🎄 🎅[XMAS] Blox Fruits", SaveConfig = true, ConfigFolder = "🎄 🎅[XMAS] Blox Fruits"})
+
+_G.x2xp = true
+_G.fragment200 = true
+_G.fragment500 = true
+_G.elfhat = true
+_G.satanhat = true
+_G.sleigh = true
+_G.fast_attack = true
+_G.stop_fastattack = true
+_G.FPSBooster = true
+_G.Redeem_Code = true
+_G.Auto_Buy_Random_Fruit = true
+_G.Meele_Stat = true
+_G.Defense_Stat = true
+_G.Gun_Stat = true
+_G.BloxFruit_Stat = true
+_G.Sword_Stat = true
+
+--stat--
+	function Meele_Stat()
+		while _G.Meele_Stat == true do
+			local args = {
+				[1] = "AddPoint",
+				[2] = "Melee",
+				[3] = 1
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+			wait(0.1)
+		end
+	end
+
+	function Defense_Stat()
+		while _G.Defense_Stat == true do
+			local args = {
+				[1] = "AddPoint",
+				[2] = "Defense",
+				[3] = 1
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+			wait(0.1)
+		end
+	end
+
+	function Gun_Stat()
+		while _G.Gun_Stat == true do 
+			local args = {
+				[1] = "AddPoint",
+				[2] = "Gun",
+				[3] = 1
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+			wait(0.1)
+		end
+	end
+
+	function BloxFruit_Stat()
+		while _G.BloxFruit_Stat == true do
+			local args = {
+				[1] = "AddPoint",
+				[2] = "Demon Fruit",
+				[3] = 1
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+			wait(0.1)
+		end
+	end
+	
+	function Sword_Stat()
+		while _G.Sword_Stat == true do
+			local args = {
+				[1] = "AddPoint",
+				[2] = "Sword",
+				[3] = 1
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+			wait(0.1)
+		end
+	end
+
+function Auto_Buy_Random_Fruit()
+	while _G.Auto_Buy_Random_Fruit == true do
+		local args = {
+			[1] = "Cousin",
+			[2] = "Buy"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(0.1)
+	end
+end
+
+
+function x2xp()
+	while _G.x2xp == true do
+		local args = {
+			[1] = "Candies",
+			[2] = "Buy",
+			[3] = 1,
+			[4] = 1
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(0.1)
+	end
+end
+
+function fragment200()
+    while _G.fragment200 == true do
+        local args = {
+            [1] = "Candies",
+            [2] = "Buy",
+            [3] = 2,
+            [4] = 1
+        }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait(0.0001)
+    end
+end
+
+
+
+function elfhat()
+	while _G.elfhat == true do
+		local args = {
+			[1] = "Candies",
+			[2] = "Buy",
+			[3] = 3,
+			[4] = 1
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(0.0001)
+	end
+end
+
+function fragment500()
+	while _G.fragment500 == true do
+		local args = {
+            [1] = "Candies",
+            [2] = "Buy",
+            [3] = 2,
+            [4] = 2
+        }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(0.1)
+	end
+end
+
+function satanhat()
+	while _G.satanhat == true do
+		local args = {
+			[1] = "Candies",
+			[2] = "Buy",
+			[3] = 3,
+			[4] = 2
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(0.001)
+	end
+end
+
+function sleigh()
+	while _G.sleigh == true do
+		local args = {
+			[1] = "Candies",
+			[2] = "Buy",
+			[3] = 3,
+			[4] = 3
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(0.0001)
+	end
+end
+
+--[GUI HUB]--
+OrionLib:MakeNotification({
+	Name = "🎄 🎅[ CANDY ] Blox Fruits",
+	Content = "BETA 🎄 🎅",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+
+local Tab = Window:MakeTab({
+	Name = "STATS",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Meele",
+	Default = false,
+	Callback = function(Value)
+		_G.Meele_Stat = Value
+		Meele_Stat()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Defense",
+	Default = false,
+	Callback = function(Value)
+		_G.Defense_Stat = Value
+		Defense_Stat()
+	end    
+})
+Tab:AddToggle({
+	Name = "Sword",
+	Default = false,
+	Callback = function(Value)
+		_G.Sword_Stat = Value
+		Sword_Stat()
+	end    
+})
+Tab:AddToggle({
+	Name = "Gun",
+	Default = false,
+	Callback = function(Value)
+		_G.Gun_Stat = Value
+		Gun_Stat()
+	end    
+})
+Tab:AddToggle({
+	Name = "Blox Fruit",
+	Default = false,
+	Callback = function(Value)
+		_G.BloxFruit_Stat = Value
+		BloxFruit_Stat()
+	end    
+})
+local Tab = Window:MakeTab({
+	Name = "SHOP",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddDropdown({
+	Name = "🍎Select Snipe Blox Fruit🍎",
+	Default = "Nil",
+	Options = {"Bomb", "Spike","Chop","Spring","Kilo","Smoke","Spin","Flame","Falcon","Ice","Sand","Dark","Revive","Diamond","Light","Light","Love","Magma","Portal","Rubber","Quake","Human-Buddha","Barrier","String","Bird-Pheonix","Rumble","Paw","Blizzard","Gravity","Dough","Shadow","Venom","Control","Spirit","Dragon","Leopard"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Buy Random Fruits",
+	Default = false,
+	Callback = function(Value)
+		_G.Auto_Buy_Random_Fruit = Value
+		Auto_Buy_Random_Fruit()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Reset Stat",
+	Callback = function(Value)
+		local args = {
+			[1] = "BlackbeardReward",
+			[2] = "Refund",
+			[3] = "2"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+	end    
+})
+
+Tab:AddButton({
+	Name = "Race ReRolls",
+	Callback = function(Value)
+		local args = {
+			[1] = "BlackbeardReward",
+			[2] = "Reroll",
+			[3] = "2"
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+  	end    
+})
+
+Tab:AddLabel("🍭🍬Buy everything below with candy🍭🍬")
+
+Tab:AddToggle({
+	Name = "x2 XP",
+	Default = false,
+	Callback = function(Value)
+		_G.x2xp = Value
+		x2xp()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "200Fragment",
+	Default = false,
+	Callback = function(Value)
+		_G.fragment200 = Value
+        fragment200()
+	end    
+})
+Tab:AddToggle({
+	Name = "500 Fragment",
+	Default = false,
+	Callback = function(Value)
+		_G.fragment500 = Value
+		fragment500()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Buy Elf Hat",
+	Callback = function(Value)
+      		_G.elfhat = Value
+			elfhat()
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Satan Hat",
+	Callback = function(Value)
+      		_G.satanhat = Value
+			satanhat()
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Sleigh",
+	Callback = function(Value)
+      		_G.sleigh = Value
+			sleigh()
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "MISC",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddButton({
+	Name = "REEDEM CODE",
+	Callback = function(Value)
+		function UseCode(Text)
+			game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(Text)
+		end
+		UseCode("Sub2Fer999")
+		UseCode("Enyu_is_Pro")
+		UseCode("Magicbus")
+		UseCode("JCWK")
+		UseCode("Starcodeheo")
+		UseCode("Bluxxy")
+		UseCode("THEGREATACE")
+		UseCode("SUB2GAMERROBOT_EXP1")
+		UseCode("StrawHatMaine")
+		UseCode("Sub2OfficialNoobie")
+		UseCode("SUB2NOOBMASTER123")
+		UseCode("Sub2Daigrock")
+		UseCode("Axiore")
+		UseCode("TantaiGaming")
+		UseCode("STRAWHATMAINE")
+  	end    
+})
+Tab:AddButton({
+	Name = "FPS BOOSTER",
+	Callback = function(Value)
+		local decalsyeeted = true
+		local g = game
+		local w = g.Workspace
+		local l = g.Lighting
+		local t = w.Terrain
+		sethiddenproperty(l,"Technology",2)
+		sethiddenproperty(t,"Decoration",false)
+		t.WaterWaveSize = 0
+		t.WaterWaveSpeed = 0
+		t.WaterReflectance = 0
+		t.WaterTransparency = 0
+		l.GlobalShadows = false
+		l.FogEnd = 9e9
+		l.Brightness = 0
+		settings().Rendering.QualityLevel = "Level01"
+		for i, v in pairs(g:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+				v.Lifetime = NumberRange.new(0)
+			elseif v:IsA("Explosion") then
+				v.BlastPressure = 1
+				v.BlastRadius = 1
+			elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+				v.Enabled = false
+			elseif v:IsA("MeshPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+				v.TextureID = 10385902758728957
+			end
+		end
+		for i, e in pairs(l:GetChildren()) do
+			if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+				e.Enabled = false
+			end
+		end
+	end 
+})
+
+Tab:AddButton({
+	Name = "Fast Attack CAN'T STOP",
+	Callback = function(Value)
+		local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+		local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
+		Camera:Stop()
+		coroutine.wrap(function()
+			game:GetService("RunService").Stepped:Connect(function()
+				if 
+					getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack then
+					getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack = 0
+					getupvalues(CombatFramework)[2]['activeController'].hitboxMagnitude = 30
+					getupvalues(CombatFramework)[2]['activeController']:attack()
+				end
+			end)
+		end)()
+  	end  
+})
+
+
+
+
+
+
+
+
+
+OrionLib:Init()
