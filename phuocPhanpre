@@ -1,8 +1,4 @@
-local Player = game:GetService("Players").LocalPlayer
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "🎄 🎅[ XMAS ] Blox Fruits", HidePremium = false,IntroEnable = true, IntroText = "🎄 🎅[XMAS] Blox Fruits", SaveConfig = true, ConfigFolder = "🎄 🎅[XMAS] Blox Fruits"})
-
-
+_G.White_Screen = true
 _G.x2xp = true
 _G.fragment200 = true
 _G.fragment500 = true
@@ -15,23 +11,64 @@ _G.stop_fastattack = true
 _G.FPSBooster = true
 _G.Redeem_Code = true
 _G.Auto_Buy_Random_Fruit = true
-_G.Select_Fruit = "Bomb", "Spike","Chop","Spring","Kilo","Smoke","Spin","Flame","Falcon","Ice","Sand","Dark","Revive","Diamond","Light","Light","Love","Magma","Portal","Rubber","Quake","Human-Buddha","Barrier","String","Bird-Pheonix","Rumble","Paw","Blizzard","Gravity","Dough","Shadow","Venom","Control","Spirit","Dragon","Leopard"
-_G.auto_buy_Fruit = true
 -------------Stat---------------------------
-_G.Meele_Stat = true
-_G.Defense_Stat = true
-_G.Gun_Stat = true
-_G.BloxFruit_Stat = true
-_G.Sword_Stat = true
+	_G.Meele_Stat = true
+	_G.Defense_Stat = true
+	_G.Gun_Stat = true
+	_G.BloxFruit_Stat = true
+	_G.Sword_Stat = true
 -------------------------Farm----------------
 _G.auto_farm = true
 _G.auto_Buso = true
-_G.auto_Ken = true
 _G.auto_Ability = true
 
+--------------------FRUIT---------------------
+_G.Bomb = true
+_G.Spike = true
+_G.Spin = true
+_G.Smoke = true
+_G.Blizzard = true
+_G.Flame = true
+_G.Ice = true
+_G.Magma = true
+_G.Light = true
+_G.Leopard = true
+_G.Control = true
+_G.Dough = true
+_G.Dragon = true
+_G.Spirit = true
+_G.Venom = true
+_G.Shadow = true
+_G.Falcon = true
+_G.Sand = true
+_G.Dark = true
+_G.Revive = true
+_G.Diamond = true
+_G.Love = true
+_G.Portal = true
+_G.Rubber = true
+_G.Quake = true
+_G.Human_Buddha = true
+_G.Barrier = true
+_G.String = true
+_G.Bird_Pheonix = true
+_G.Rumble = true
+_G.Paw = true
+_G.Gravity = true
+_G.Chop = true
+------------------------------------------------------------------STATS------------------------------------------------	
 
-
-------------------------------------------------------------------STATS------------------------------------------------
+		function auto_Buso()
+			while _G.auto_Buso == true do
+					if _G.auto_Buso then
+						if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
+						else
+							wait(3)
+						end
+					end
+				end
+			end
 
 	function auto_Ability()
 		while _G.auto_Ability == true do
@@ -103,60 +140,151 @@ _G.auto_Ability = true
 		end
 	end
 --------------------------------------------------BUY FRUIT--------------------------------------------
-function auto_buy_Fruit()
-	while _G.auto_buy_Fruit == true do
+function Diamond()
+	while _G.Diamond == true do
 		local args = {
 			[1] = "PurchaseRawFruit",
-			[2] = "Kilo-Kilo",
+			[2] = "Diamond-Diamond",
 			[3] = false
 		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
-		
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+
+function Light()
+	while _G.Light == true do
 		local args = {
 			[1] = "PurchaseRawFruit",
-			[2] = "Spin-Spin",
+			[2] = "Light-Light",
 			[3] = false
 		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
-		
-		local args = {
-			[1] = "PurchaseRawFruit",
-			[2] = "Chop-Chop",
-			[3] = false
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
-		
-		local args = {
-			[1] = "PurchaseRawFruit",
-			[2] = "Spring-Spring",
-			[3] = false
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
-		
-		local args = {
-			[1] = "PurchaseRawFruit",
-			[2] = "Spike-Spike",
-			[3] = false
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
-		
-		local args = {
-			[1] = "PurchaseRawFruit",
-			[2] = "String-String",
-			[3] = false
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
-		
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+
+function Portal()
+	while _G.Portal == true do
 		local args = {
 			[1] = "PurchaseRawFruit",
 			[2] = "Portal-Portal",
 			[3] = false
 		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))(_G.Select_Fruit)
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 		wait()
 	end
 end
-
+function String()
+	while _G.String == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "String-String",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Spin()
+    while _G.Spin == true do
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Spin-Spin",
+            [3] = false
+        }
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+    end
+end
+function Diamond()
+	while _G.Diamond == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Diamond-Diamond",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Sand()
+	while _G.Sand == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Sand-Sand",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Ice()
+	while _G.Ice == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Ice-Ice",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Flame()
+	while _G.Flame == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Flame-Flame",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Kilo()
+	while _G.Kilo == true do 
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Kilo-Kilo",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Spring()
+	while _G.Spring == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Spring-Spring",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Chop()
+	while _G.Chop == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Chop-Chop",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
+function Spike()
+	while _G.Spike == true do
+		local args = {
+			[1] = "PurchaseRawFruit",
+			[2] = "Spike-Spike",
+			[3] = false
+		}
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait()
+	end
+end
 
 ----------------------------------------------FARM-----------------------------------------------
 
@@ -263,8 +391,8 @@ OrionLib:MakeNotification({
 	Time = 20
 })
 OrionLib:MakeNotification({
-	Name = "🔰 Change Logs New 🔰",
-	Content = "♻️ Shop , Stat , Meele ,...♻️",
+	Name = "🔔 Change Logs New 🔔 ",
+	Content = "♻️ Shop , Stat , Meele , Fruit Shop ,...♻️",
 	Image = "rbxassetid://4483345998",
 	Time = 30
 })
@@ -274,7 +402,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Owner & Devs : PhuocPhan#4450"
+	Name = " Owner & Devs : PhuocPhan#4450"
 })
 local Section = Tab:AddSection({
 	Name = "Discord Support : https://discord.gg/tuzTUeWVt5"
@@ -302,6 +430,14 @@ Tab:AddToggle({
 	Callback = function(Value)
 		_G.auto_Ability = Value
 		auto_Ability()
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Buso",
+	Default = false,
+	Callback = function(Value)
+		_G.auto_Buso = Value
+		auto_Buso()
 	end    
 })
 ------------------------------------stat------------------------
@@ -356,7 +492,7 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab:AddLabel("Meele")----------------------------MEELEv1-------------------------------------
+Tab:AddLabel("_____👊Meele👊_____")----------------------------MEELEv1-------------------------------------
 
 Tab:AddButton({
 	Name = "Buy Electro",
@@ -468,23 +604,8 @@ Tab:AddButton({
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
   	end    
 })
-Tab:AddLabel("🍎Fruits🍎")
-Tab:AddToggle({
-	Name = "Buy Fruit Spine",
-	Default = false,
-	Callback = function(Value)
-		_G.Select_Fruit = Value
-		print(_G.Select_Fruit)
-	end    
-})
-Tab:AddDropdown({
-	Name = "🍎Select Snipe Blox Fruit🍎[ NOT WORKING ]",
-	Default = "Nil",
-	Options = {"Bomb", "Spike","Chop","Spring","Kilo","Smoke","Spin","Flame","Falcon","Ice","Sand","Dark","Revive","Diamond","Light","Light","Love","Magma","Portal","Rubber","Quake","Human-Buddha","Barrier","String","Bird-Pheonix","Rumble","Paw","Blizzard","Gravity","Dough","Shadow","Venom","Control","Spirit","Dragon","Leopard"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
+-------------RANDOM-----------------------------------------------------------
+Tab:AddLabel("♻️ RANDOM ♻️")
 Tab:AddToggle({
 	Name = "Buy Random Fruits",
 	Default = false,
@@ -494,8 +615,7 @@ Tab:AddToggle({
 	end    
 })
 --------------------------------------FRAGMENT------------------------------------
-
-Tab:AddLabel("FragMent")
+Tab:AddLabel("_____🎆FRAGMENT🎆_____")
 Tab:AddButton({
 	Name = "Reset Stat",
 	Callback = function(Value)
@@ -516,7 +636,7 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddLabel("🍭🍬Buy everything below with candy🍭🍬")
+Tab:AddLabel("_____🍬Buy everything below with candy🍬_____")
 
 Tab:AddToggle({
 	Name = "x2 XP",
@@ -565,6 +685,290 @@ Tab:AddButton({
 			sleigh()
   	end    
 })
+----------------------FRUIT BUY -----------------------------------------------------------------
+local Tab = Window:MakeTab({
+	Name = "Fruits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddLabel("_____🍎Fruits🍎_____")
+Tab:AddToggle({
+	Name = "Buy Bomb",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Spike",
+	Default = false,
+	Callback = function(Value)
+		_G.Spike = Value
+		Spike()
+	end    
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Chop",
+	Default = false,
+	Callback = function(Value)
+		_G.Chop = Value
+		Chop()
+	end
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Spring",
+	Default = false,
+	Callback = function(Value)
+		_G.Spring = Value
+		Spring()
+	end
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Kilo",
+	Default = false,
+	Callback = function(Value)
+		_G.Kilo = Value
+		Kilo()
+	end
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Smoke",
+	Default = false,
+	Callback = function(Value)
+		print("wait new update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Spin",
+	Default = false,
+	Callback = function(Value)
+		_G.Spin = Value
+		Spin()
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Flame",
+	Default = false,
+	Callback = function(Value)
+		_G.Flame = Value
+		Flame()
+	end
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Falcon",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Ice",
+	Default = false,
+	Callback = function(Value)
+		_G.Ice = Value
+		Ice()
+	end
+})
+
+Tab:AddToggle({
+	Name = "Buy Sand",
+	Default = false,
+	Callback = function(Value)
+		_G.Sand = Value
+		Sand()
+	end
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Dark",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Revive",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Diamond",
+	Default = false,
+	Callback = function(Value)
+		_G.Diamond = Value
+		Diamond()
+	end
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Light",
+	Default = false,
+	Callback = function(Value)
+		_G.Light = Value
+		Light()
+	end
+})
+
+
+Tab:AddToggle({
+	Name = "Buy Love",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Magma",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Portal",
+	Default = false,
+	Callback = function(Value)
+		_G.Portal = Value
+		Portal()
+	end
+})
+
+Tab:AddToggle({
+	Name = "Buy Rubber",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Quake",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Human-Buddha",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Barrier",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy String",
+	Default = false,
+	Callback = function(Value)
+		_G.String = Value
+		String()
+	end
+})
+
+Tab:AddToggle({
+	Name = "Buy Bird-Pheonix",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Rumble",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Paw",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Blizzard",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Gravity",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Dough",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Shadow",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Venom",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Control",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Spirit",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Dragon",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+Tab:AddToggle({
+	Name = "Buy Leopard",
+	Default = false,
+	Callback = function(Value)
+		print("Wait New Update")
+	end
+})
+
 -----------------------------MICS-------------------------
 local Tab = Window:MakeTab({
 	Name = "MISC",
@@ -594,6 +998,7 @@ Tab:AddButton({
 		UseCode("STRAWHATMAINE")
   	end    
 })
+Tab:AddLabel("_____〽️ FPS 〽️_____")
 Tab:AddButton({
 	Name = "FPS BOOSTER",
 	Callback = function(Value)
